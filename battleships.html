@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Battleships</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			font-family: 'Indie Flower', cursive;
+		}
+		table {
+			margin: 3% auto;
+			border-collapse: collapse;
+		}
+		.special {
+			border: none;
+		}
+		td {
+			border: 1px solid yellow;
+		}
+		td {
+			height: 50px;
+			width: 50px;
+		}
+		td:hover {
+			box-shadow: 1px 1px 3px black;
+		}
+		td:active {
+			background: grey;
+		}
+		.name {
+			font-size: 2em;
+			text-align: center;
+		}
+		.name:hover, .special:hover {
+			box-shadow: none;
+		}
+		.name:active, .special:active {
+			background: inherit;
+		}
+	</style>
+</head>
+<body>
+
+	<section>
+		
+		<table>
+			<tr>
+				<td class="special"></td>
+				<td class="name">А</td>
+				<td class="name">Б</td>
+				<td class="name">В</td>
+				<td class="name">Г</td>
+				<td class="name">Д</td>
+				<td class="name">Е</td>
+				<td class="name">Ж</td>
+				<td class="name">З</td>
+				<td class="name">И</td>
+				<td class="name">К</td>
+			</tr>
+			<tr>
+				<td class="name">1</td>
+				<td id="A1" onclick="shot()"></td>
+				<td id="B1" onclick="shot()"></td>
+				<td id="C1" onclick="shot()"></td>
+				<td id="D1" onclick="shot()"></td>
+				<td id="E1" onclick="shot()"></td>
+				<td id="F1" onclick="shot()"></td>
+				<td id="G1" onclick="shot()"></td>
+				<td id="H1" onclick="shot()"></td>
+				<td id="I1" onclick="shot()"></td>
+				<td id="J1" onclick="shot()"></td>
+			</tr>
+			<tr>
+				<td class="name">2</td>
+				<td id="A2" onclick="shot()"></td>
+				<td id="B2" onclick="shot()"></td>
+				<td id="C2" onclick="shot()"></td>
+				<td id="D2" onclick="shot()"></td>
+				<td id="E2" onclick="shot()"></td>
+				<td id="F2" onclick="shot()"></td>
+				<td id="G2" onclick="shot()"></td>
+				<td id="H2" onclick="shot()"></td>
+				<td id="I2" onclick="shot()"></td>
+				<td id="J2" onclick="shot()"></td>
+			</tr>
+			<tr>
+				<td class="name">3</td>
+				<td id="A3" onclick="shot()"></td>
+				<td id="B3" onclick="shot()"></td>
+				<td id="C3" onclick="shot()"></td>
+				<td id="D3" onclick="shot()"></td>
+				<td id="E3" onclick="shot()"></td>
+				<td id="F3" onclick="shot()"></td>
+				<td id="G3" onclick="shot()"></td>
+				<td id="H3" onclick="shot()"></td>
+				<td id="I3" onclick="shot()"></td>
+				<td id="J3" onclick="shot()"></td>
+			</tr>
+			<tr>
+				<td class="name">4</td>
+				<td id="A4" onclick="shot()"></td>
+				<td id="B4" onclick="shot()"></td>
+				<td id="C4" onclick="shot()"></td>
+				<td id="D4" onclick="shot()"></td>
+				<td id="E4" onclick="shot()"></td>
+				<td id="F4" onclick="shot()"></td>
+				<td id="G4" onclick="shot()"></td>
+				<td id="H4" onclick="shot()"></td>
+				<td id="I4" onclick="shot()"></td>
+				<td id="J4" onclick="shot()"></td>
+			</tr>
+			<tr>
+				<td class="name">5</td>
+				<td id="A5" onclick="shot()"></td>
+				<td id="B5" onclick="shot()"></td>
+				<td id="C5" onclick="shot()"></td>
+				<td id="D5" onclick="shot()"></td>
+				<td id="E5" onclick="shot()"></td>
+				<td id="F5" onclick="shot()"></td>
+				<td id="G5" onclick="shot()"></td>
+				<td id="H5" onclick="shot()"></td>
+				<td id="I5" onclick="shot()"></td>
+				<td id="J5" onclick="shot()"></td>
+			</tr>
+			<tr>
+				<td class="name">6</td>
+				<td id="A6" onclick="shot()"></td>
+				<td id="B6" onclick="shot()"></td>
+				<td id="C6" onclick="shot()"></td>
+				<td id="D6" onclick="shot()"></td>
+				<td id="E6" onclick="shot()"></td>
+				<td id="F6" onclick="shot()"></td>
+				<td id="G6" onclick="shot()"></td>
+				<td id="H6" onclick="shot()"></td>
+				<td id="I6" onclick="shot()"></td>
+				<td id="J6" onclick="shot()"></td>
+			</tr>
+			<tr>
+				<td class="name">7</td>
+				<td id="A7" onclick="shot()"></td>
+				<td id="B7" onclick="shot()"></td>
+				<td id="C7" onclick="shot()"></td>
+				<td id="D7" onclick="shot()"></td>
+				<td id="E7" onclick="shot()"></td>
+				<td id="F7" onclick="shot()"></td>
+				<td id="G7" onclick="shot()"></td>
+				<td id="H7" onclick="shot()"></td>
+				<td id="I7" onclick="shot()"></td>
+				<td id="J7" onclick="shot()"></td>
+			</tr>
+			<tr>
+				<td class="name">8</td>
+				<td id="A8" onclick="shot()"></td>
+				<td id="B8" onclick="shot()"></td>
+				<td id="C8" onclick="shot()"></td>
+				<td id="D8" onclick="shot()"></td>
+				<td id="E8" onclick="shot()"></td>
+				<td id="F8" onclick="shot()"></td>
+				<td id="G8" onclick="shot()"></td>
+				<td id="H8" onclick="shot()"></td>
+				<td id="I8" onclick="shot()"></td>
+				<td id="J8" onclick="shot()"></td>
+			</tr>
+			<tr>
+				<td class="name">9</td>
+				<td id="A9" onclick="shot()"></td>
+				<td id="B9" onclick="shot()"></td>
+				<td id="C9" onclick="shot()"></td>
+				<td id="D9" onclick="shot()"></td>
+				<td id="E9" onclick="shot()"></td>
+				<td id="F9" onclick="shot()"></td>
+				<td id="G9" onclick="shot()"></td>
+				<td id="H9" onclick="shot()"></td>
+				<td id="I9" onclick="shot()"></td>
+				<td id="J9" onclick="shot()"></td>
+			</tr>
+			<tr>
+				<td class="name">10</td>
+				<td id="A10" onclick="shot()"></td>
+				<td id="B10" onclick="shot()"></td>
+				<td id="C10" onclick="shot()"></td>
+				<td id="D10" onclick="shot()"></td>
+				<td id="E10" onclick="shot()"></td>
+				<td id="F10" onclick="shot()"></td>
+				<td id="G10" onclick="shot()"></td>
+				<td id="H10" onclick="shot()"></td>
+				<td id="I10" onclick="shot()"></td>
+				<td id="J10" onclick="shot()"></td>
+			</tr>
+		</table>
+		
+	</section>
+
+	<script>
+		function start(){
+			var answer = false,
+					count = 0,
+					countall = 0,
+					battlepos = [false, false, true, true, true, false];
+
+			while(count<3) {
+				answer = prompt('Введите позицию корабля от 0 до 6');
+				if (answer < 0 && answer > 6 && answer == "" && typeof answer != "string")
+					continue;
+
+				if (battlepos[answer]) {
+					alert("Подбит!");
+					battlepos[answer] = false;
+					count++;
+				} else {
+					alert("Мимо!");
+				}
+
+				countall++;
+
+				if (count == 3) {
+					alert("Корабль уничтожен! Попыток: " + countall);
+				}
+			}
+		}
+		
+	</script>
+</body>
+</html>
