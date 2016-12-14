@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Road payment</title>
+</head>
+<body>
+
+	<script>
+		var bd = document.body;
+		function calc() {
+			var paid = 0,
+					dist = 0,
+					rand = 0,
+					PAID = 7000,
+					DIST = 30;
+
+			paid = +prompt("Введите сумму покупки");
+			if (paid >= PAID) {
+				rand = Math.random()*(15-1)+1;
+				alert('Вы выиграли скидку в размере ' + rand.toFixed() + "%");
+			}
+			if (confirm("Оплатить наличными? \nПри оплате наличными есть шанс на бесплатную доставку")) {
+				dist = prompt("Введите расстояние до вашего дома в км");
+				if (dist < DIST) {
+					alert("Итоговая сумма к оплате: " + paid + "\nВаш товар будет доставлен бесплатно! Приятного пользования!");
+				} else {
+					var x = (dist - DIST)*5;
+					alert("Итоговая сумма к оплате за товар: " + paid + "\nДоплата за доставку товара составляет: " + x + "грн");
+				}
+		}
+
+		bd.onload = calc;
+	</script>
+</body>
+</html>
