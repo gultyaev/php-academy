@@ -1,0 +1,59 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+	font-family: Georgia1, Georgia, serif;
+}
+
+body {
+	background-image: -webkit-linear-gradient(#ccc, #fff);
+	background-image: linear-gradient(#ccc, #fff);
+	background-repeat: no-repeat;
+}
+
+.wrapper {
+	padding: 0;
+	position: relative;
+}
+
+div {
+	padding: 20px;
+}
+
+.clear-fix {
+	clear: both;
+	padding: 0;
+}
+
+*::-moz-selection {
+	background: #2cfd06;
+	text-shadow: 1px 1px 2px red;
+}
+*::selection {
+	background: #2cfd06;
+	text-shadow: 1px 1px 2px red;
+}
+
+.text-align-center {
+	text-align: center;
+}
+
+section {
+	padding: 10px;
+}
+
+.text-shadow {
+	color: transparent;
+	text-shadow: 0 2px 0 #eee,
+							0 4px 0 #777,
+							0 4px 7px black;
+}
+
+.rainbow {
+	height: 500px;
+	width: 500px;
+	background-image: linear-gradient(to top right, red 33.33%, red 33.33%, white 33.33%, white 66.66%, blue 66.66%, blue);
+}

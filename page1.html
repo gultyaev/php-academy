@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<link rel="stylesheet" href="style1.css"/>
+	<meta charset="UTF-8"/>
+	<title>Some page</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<span class="logo"><h1><a href="/" class="nav-link">My Site</a></h1></span>
+			<nav>
+				<ul class="main-menu">
+					<li><a class="main-menu__item" href="portfolio.html">Portfolio</a></li>
+					<li><a class="main-menu__item" href="about.html">About</a></li>
+					<li><a class="main-menu__item" href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<section>
+			<ul class="portfolio-container">
+				<li><img class="portfolio__item" src="images/nastol.com.ua-10123.jpg" alt="picture"></li>
+				<li><img class="portfolio__item" src="images/nastol.com.ua-11568.jpg" alt="picture"></li>
+				<li><img class="portfolio__item" src="images/nastol.com.ua-132026.jpg" alt="picture"></li>
+				<li><img class="portfolio__item" src="images/nastol.com.ua-23930.jpg" alt="picture"></li>
+				<li><img class="portfolio__item" src="images/nastol.com.ua-38859.jpg" alt="picture"></li>
+				<li><img class="portfolio__item" src="images/nastol.com.ua-44959.jpg" alt="picture"></li>
+			</ul>
+		</section>
+		
+		<footer>
+			&copy; MySite 1016 - <span id="year"></span>
+		</footer>
+	</div>
+
+	<script>
+		var thisyear = new Date().getFullYear();
+		document.getElementById('year').innerHTML=thisyear;
+	</script>
+
+</body>
+</html>
